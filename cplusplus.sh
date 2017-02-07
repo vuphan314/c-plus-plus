@@ -1,4 +1,4 @@
-cpp_file=cartesian_product.cpp
+cpp_file=main.cpp
 out_file=/tmp/cpp.out
 
 reset
