@@ -1,3 +1,6 @@
+cpp_file=cartesian_product.cpp
+out_file=/tmp/cpp.out
+
 reset
-g++ cartesian_product.cpp
-./a.out
+g++ $cpp_file -o $out_file
+$out_file

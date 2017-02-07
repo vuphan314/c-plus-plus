@@ -18,10 +18,9 @@ void setCartesianProduct(const vector<vector<T>> &input,
 template<typename T>
 void setCartesianPower(const vector<T> &items,
     unsigned int exponent, vector<vector<T>> &output) {
-  vector<vector<T>> inputV{{}}, &input = inputV;
+  vector<vector<T>> inputV, &input = inputV;
   for (size_t i = 0; i < exponent; i++) {
-    vector<T> tmp = items;
-    input.push_back(tmp);
+    input.push_back(items);
   }
   setCartesianProduct(input, output);
 }
