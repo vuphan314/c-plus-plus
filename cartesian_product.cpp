@@ -6,10 +6,11 @@ using namespace std;
 
 ////////////////////////////////////////////////////////////
 
-vector<vector<int>> cart_product (const vector<vector<int>>& v) {
-  vector<vector<int>> s = {{}};
+template<typename T>
+vector<vector<T>> cart_product (const vector<vector<T>>& v) {
+  vector<vector<T>> s = {{}};
   for (auto& u : v) {
-    vector<vector<int>> r;
+    vector<vector<T>> r;
     for (auto& x : s) {
       for (auto y : u) {
         r.push_back(x);
