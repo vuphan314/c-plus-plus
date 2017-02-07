@@ -1,8 +1,30 @@
+#include <iostream>
 #include <vector>
 
 using namespace std;
 
 ////////////////////////////////////////////////////////////
+
+template<typename T>
+void setCartesianPower(const vector<T> &items,
+  unsigned int exponent, vector<vector<T>> &output);
+
+template<typename T>
+void setCartesianProduct(const vector<vector<T>> &input,
+  vector<vector<T>> &output);
+
+////////////////////////////////////////////////////////////
+
+template<typename T>
+void setCartesianPower(const vector<T> &items,
+    unsigned int exponent, vector<vector<T>> &output) {
+  vector<vector<T>> inputV{{}}, &input = inputV;
+  for (size_t i = 0; i < exponent; i++) {
+    vector<T> tmp = items;
+    input.push_back(tmp);
+  }
+  setCartesianProduct(input, output);
+}
 
 template<typename T>
 void setCartesianProduct(const vector<vector<T>> &input,
@@ -22,9 +44,9 @@ void setCartesianProduct(const vector<vector<T>> &input,
 ////////////////////////////////////////////////////////////
 
 int main() {
-	vector<vector<int>> inputV{{1}, {4,5,6}, {8,9}},
-    &input = inputV, outputV{{}}, &output = outputV;
-  setCartesianProduct(input, output);
+	vector<int> itemsV{0, 1}, &items = itemsV;
+  vector<vector<int>> outputV{{}}, &output = outputV;
+  setCartesianPower(items, 2, output);
 	for (size_t i = 0; i < output.size(); i++) {
 		for (size_t j = 0; j < output[i].size(); j++) {
 			cout << output[i][j] << "\t";
