@@ -5,9 +5,8 @@ using namespace std;
 ////////////////////////////////////////////////////////////
 
 template<typename T>
-vector<vector<T>> get_cartesian_product (
-    const vector<vector<T>> &v) {
-  vector<vector<T>> s = {{}};
+void setCartesianProduct(
+    const vector<vector<T>> &v, vector<vector<T>> &s) {
   for (auto& u : v) {
     vector<vector<T>> r;
     for (auto& x : s) {
@@ -18,17 +17,17 @@ vector<vector<T>> get_cartesian_product (
     }
     s.swap(r);
   }
-  return s;
 }
 
 ////////////////////////////////////////////////////////////
 
-int main () {
-	vector<vector<int>> test = {{1}, {4,5,6}, {8,9}};
-	vector<vector<int>> res = get_cartesian_product(test);
-	for (size_t i = 0; i < res.size(); i++) {
-		for (size_t j = 0; j < res[i].size(); j++) {
-			cout << res[i][j] << "\t";
+int main() {
+	vector<vector<int>> inputV{{1}, {4,5,6}, {8,9}},
+    &input = inputV, outputV{{}}, &output = outputV;
+  setCartesianProduct(input, output);
+	for (size_t i = 0; i < output.size(); i++) {
+		for (size_t j = 0; j < output[i].size(); j++) {
+			cout << output[i][j] << "\t";
 		}
 		cout << endl;
 	}
