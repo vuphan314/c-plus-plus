@@ -5,17 +5,17 @@ using namespace std;
 ////////////////////////////////////////////////////////////
 
 template<typename T>
-void setCartesianProduct(
-    const vector<vector<T>> &v, vector<vector<T>> &s) {
-  for (auto& u : v) {
+void setCartesianProduct(const vector<vector<T>> &input,
+    vector<vector<T>> &output) {
+  for (auto& u : input) {
     vector<vector<T>> r;
-    for (auto& x : s) {
+    for (auto& x : output) {
       for (auto y : u) {
         r.push_back(x);
         r.back().push_back(y);
       }
     }
-    s.swap(r);
+    output.swap(r);
   }
 }
 
