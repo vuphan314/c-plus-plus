@@ -5,18 +5,18 @@
 using namespace std;
 
 vector<vector<int> > cart_product (const vector<vector<int>>& v) {
-    vector<vector<int>> s = {{}};
-    for (auto& u : v) {
-        vector<vector<int>> r;
-        for (auto& x : s) {
-            for (auto y : u) {
-                r.push_back(x);
-                r.back().push_back(y);
-            }
-        }
-        s.swap(r);
+  vector<vector<int>> s = {{}};
+  for (auto& u : v) {
+    vector<vector<int>> r;
+    for (auto& x : s) {
+      for (auto y : u) {
+        r.push_back(x);
+        r.back().push_back(y);
+      }
     }
-    return s;
+    s.swap(r);
+  }
+  return s;
 }
 
 int main () {
@@ -28,5 +28,5 @@ int main () {
 		}
 		cout << std::endl;
 	}
-    return 0;
+  return 0;
 }
