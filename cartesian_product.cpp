@@ -4,7 +4,9 @@
 
 using namespace std;
 
-vector<vector<int> > cart_product (const vector<vector<int>>& v) {
+////////////////////////////////////////////////////////////
+
+vector<vector<int>> cart_product (const vector<vector<int>>& v) {
   vector<vector<int>> s = {{}};
   for (auto& u : v) {
     vector<vector<int>> r;
@@ -18,6 +20,8 @@ vector<vector<int> > cart_product (const vector<vector<int>>& v) {
   }
   return s;
 }
+
+////////////////////////////////////////////////////////////
 
 int main () {
 	vector<vector<int> > test{{1}, {4,5,6}, {8,9}};
