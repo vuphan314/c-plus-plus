@@ -1,4 +1,5 @@
 #include "cartesian_product.cpp"
+#include "vectors.cpp"
 
 ////////////////////////////////////////////////////////////
 
@@ -21,5 +22,5 @@ void testProduct() {
 
 int main() {
   testPower();
-  // testProduct();
+  testProduct();
 }
