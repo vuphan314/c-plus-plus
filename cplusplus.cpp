@@ -5,7 +5,7 @@
 void testPower() {
   vector<int> itemsV{0, 1, -1}, &items = itemsV;
   vector<vector<int>> outputV{{}}, &output = outputV;
-  unsigned int exponent = 3;
+  unsigned int exponent = 2;
   setCartesianPower(items, exponent, output);
   printVectors(output);
 }
