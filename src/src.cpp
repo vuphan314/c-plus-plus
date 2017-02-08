@@ -8,14 +8,14 @@ void testPower() {
   vector<vector<int>> outputV{{}}, &output = outputV;
   unsigned int exponent = 2;
   setCartesianPower(items, exponent, output);
-  printVectors(output);
+  printVector2d(output);
 }
 
 void testProduct() {
   vector<vector<int>> inputV{{0, 1}, {0, 1}, {0, 1}},
     &input = inputV, outputV{{}}, &output = outputV;
   setCartesianProduct(input, output);
-  printVectors(output);
+  printVector2d(output);
 }
 
 ////////////////////////////////////////////////////////////
@@ -23,4 +23,6 @@ void testProduct() {
 int main() {
   testPower();
   testProduct();
+  vector<vector<vector<int>>> v3d{{{0, 0}, {1, 1}}, {{2, 2}, {3, 3}}};
+  printVector3d(v3d);
 }

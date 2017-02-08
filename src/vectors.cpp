@@ -1,18 +1,40 @@
 #include <iostream>
+#include <vector>
 
 ////////////////////////////////////////////////////////////
 
 template<typename T>
-void printVectors(const vector<vector<T>> vectors);
+void printVector3d(const vector<vector<vector<T>>> &vector3d);
+
+template<typename T>
+void printVector2d(const vector<vector<T>> &vector2d);
+
+template<typename T>
+void printVector1d(const vector<T> &vector1d);
 
 ////////////////////////////////////////////////////////////
 
 template<typename T>
-void printVectors(const vector<vector<T>> vectors) {
-	for (size_t i = 0; i < vectors.size(); i++) {
-		for (size_t j = 0; j < vectors[i].size(); j++) {
-			cout << vectors[i][j] << "\t";
-		}
-    cout << endl;
+void printVector3d(const vector<vector<vector<T>>> &vector3d) {
+  cout << "<\n";
+  for (vector<vector<T>> vector2d : vector3d) {
+    printVector2d(vector2d);
+    cout << ",\n";
+  }
+  cout << ">\n";
+}
+
+template<typename T>
+void printVector2d(const vector<vector<T>> &vector2d) {
+  for (vector<T> vector1d : vector2d) {
+    printVector1d(vector1d);
+    cout << "\n";
+  }
+}
+
+template<typename T>
+void printVector1d(const vector<T> &vector1d) {
+  for (T item : vector1d) {
+    cout << item << "\t";
   }
 }
