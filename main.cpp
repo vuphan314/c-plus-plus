@@ -2,19 +2,17 @@
 
 ////////////////////////////////////////////////////////////
 
-template<typename T>
-void printVectors(const vector<vector<T>> vectors) {
-	for (size_t i = 0; i < vectors.size(); i++) {
-		for (size_t j = 0; j < vectors[i].size(); j++) {
-			cout << vectors[i][j] << "\t";
-		}
-    cout << endl;
-  }
+void testPower() {
+  vector<int> itemsV{0, 1, -1}, &items = itemsV;
+  vector<vector<int>> outputV{{}}, &output = outputV;
+  unsigned int exponent = 3;
+  setCartesianPower(items, exponent, output);
+  printVectors(output);
 }
 
 void testProduct() {
-  vector<vector<int>> inputV{{-1}, {3, 5}, {-2, 0}}, &input = inputV,
-    outputV{{}}, &output = outputV;
+  vector<vector<int>> inputV{{0, 1}, {0, 1}, {0, 1}},
+    &input = inputV, outputV{{}}, &output = outputV;
   setCartesianProduct(input, output);
   printVectors(output);
 }
@@ -22,5 +20,6 @@ void testProduct() {
 ////////////////////////////////////////////////////////////
 
 int main() {
-  testProduct();
+  testPower();
+  // testProduct();
 }
