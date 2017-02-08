@@ -13,8 +13,11 @@ void testPower() {
 
 void testProduct() {
   vector<vector<int>> inputV{{0, 1}, {0, 1}, {0, 1}},
-    &input = inputV, outputV{{}}, &output = outputV;
-  setCartesianProduct(input, output);
+    &input = inputV, //todo how 1-shot reference
+    outputV{{}}, //todo why {{}}
+    &output = outputV;
+  setCartesianProduct(input, output); //todo why work without &
+  // setCartesianProduct(inputV, outputV);
   printVector2d(output);
 }
 
@@ -26,7 +29,7 @@ void testPrinting() {
 ////////////////////////////////////////////////////////////
 
 int main() {
-  testPower();
+  // testPower();
   testProduct();
-  testPrinting();
+  // testPrinting();
 }
