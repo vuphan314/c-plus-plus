@@ -4,20 +4,17 @@
 ////////////////////////////////////////////////////////////
 
 void testPower() {
-  vector<int> itemsV{0, 1, -1}, &items = itemsV;
-  vector<vector<int>> outputV{{}}, &output = outputV;
+  vector<int> items{0, 1, -1};
+  vector<vector<int>> output{{}}; //todo why {{}}
   unsigned int exponent = 2;
   setCartesianPower(items, exponent, output);
   printVector2d(output);
 }
 
 void testProduct() {
-  vector<vector<int>> inputV{{0, 1}, {0, 1}, {0, 1}},
-    &input = inputV, //todo how 1-shot reference
-    outputV{{}}, //todo why {{}}
-    &output = outputV;
-  setCartesianProduct(input, output); //todo why work without &
-  // setCartesianProduct(inputV, outputV);
+  vector<vector<int>> input{{0, 1}, {0, 1}, {0, 1}},
+    output{{}};
+  setCartesianProduct(input, output);
   printVector2d(output);
 }
 
