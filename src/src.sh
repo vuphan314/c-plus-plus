@@ -1,4 +1,4 @@
-cpp_file=main.cpp
+cpp_file=src.cpp
 out_file=/tmp/cpp.out
 
 reset
