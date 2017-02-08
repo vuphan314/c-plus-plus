@@ -18,11 +18,15 @@ void testProduct() {
   printVector2d(output);
 }
 
+void testPrinting() {
+  vector<vector<vector<int>>> v3d{{{0, 0}, {1, 1}}, {{2, 2}, {3, 3}}};
+  printVector3d(v3d);
+}
+
 ////////////////////////////////////////////////////////////
 
 int main() {
   testPower();
   testProduct();
-  vector<vector<vector<int>>> v3d{{{0, 0}, {1, 1}}, {{2, 2}, {3, 3}}};
-  printVector3d(v3d);
+  testPrinting();
 }
