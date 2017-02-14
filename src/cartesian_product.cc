@@ -1,16 +1,6 @@
-#include <vector>
-
-using namespace std;
-
-////////////////////////////////////////////////////////////
-
-template<typename T>
-void setCartesianPower(const vector<T> &items,
-  unsigned int exponent, vector<vector<T>> &output);
-
-template<typename T>
-void setCartesianProduct(const vector<vector<T>> &input,
-  vector<vector<T>> &output);
+// #include <vector>
+//
+// using namespace std;
 
 ////////////////////////////////////////////////////////////
 
@@ -27,6 +17,7 @@ void setCartesianPower(const vector<T> &items,
 template<typename T>
 void setCartesianProduct(const vector<vector<T>> &input,
     vector<vector<T>> &output) {
+  output{{}};
   for (auto& u : input) {
     vector<vector<T>> r;
     for (auto& x : output) {

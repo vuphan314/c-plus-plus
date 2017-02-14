@@ -1,19 +1,24 @@
-#include "cartesian_product.cpp"
-#include "vectors.cpp"
+using namespace std;
+
+#include <vector>
+
+
+#include "cartesian_product.h"
+#include "vectors.cc"
 
 ////////////////////////////////////////////////////////////
 
-void testPower() {
-  vector<int> items{0, 1, -1};
-  vector<vector<int>> output{{}}; //todo why {{}}
-  unsigned int exponent = 2;
-  setCartesianPower(items, exponent, output);
-  printVector2d(output);
-}
+// void testPower() {
+//   vector<int> items{0, 1, -1};
+//   vector<vector<int>> output{{}}; //todo why {{}}
+//   unsigned int exponent = 2;
+//   setCartesianPower(items, exponent, output);
+//   printVector2d(output);
+// }
 
 void testProduct() {
   vector<vector<int>> input{{0, 1}, {0, 1}, {0, 1}},
-    output{{}};
+    output;
   setCartesianProduct(input, output);
   printVector2d(output);
 }
