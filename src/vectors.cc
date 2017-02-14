@@ -1,3 +1,7 @@
+#include "vectors.h"
+
+////////////////////////////////////////////////////////////
+
 template<typename T>
 void printVector3d(const vector<vector<vector<T>>> &vector3d) {
   cout << "<\n";

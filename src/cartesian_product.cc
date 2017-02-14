@@ -1,6 +1,4 @@
-// #include <vector>
-//
-// using namespace std;
+#include "cartesian_product.h"
 
 ////////////////////////////////////////////////////////////
 
@@ -17,7 +15,8 @@ void setCartesianPower(const vector<T> &items,
 template<typename T>
 void setCartesianProduct(const vector<vector<T>> &input,
     vector<vector<T>> &output) {
-  output{{}};
+  // output = {{}};
+  // for (vect u : input) {
   for (auto& u : input) {
     vector<vector<T>> r;
     for (auto& x : output) {

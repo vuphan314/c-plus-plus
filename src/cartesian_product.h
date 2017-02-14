@@ -1,9 +1,5 @@
-#ifndef CARTESIAN_PRODUCT_H_
-#define CARTESIAN_PRODUCT_H_
-
-////////////////////////////////////////////////////////////
-
-
+#ifndef CARTESIAN_PRODUCT_H
+#define CARTESIAN_PRODUCT_H
 
 ////////////////////////////////////////////////////////////
 
@@ -17,4 +13,4 @@ void setCartesianProduct(const vector<vector<T>> &input,
 
 ////////////////////////////////////////////////////////////
 
-#endif // CARTESIAN_PRODUCT_H_
+#endif // CARTESIAN_PRODUCT_H

@@ -1,5 +1,5 @@
-#ifndef VECTORS_H_
-#define VECTORS_H_
+#ifndef VECTORS_H
+#define VECTORS_H
 
 ////////////////////////////////////////////////////////////
 
@@ -14,4 +14,4 @@ void printVector1d(const vector<T> &vector1d);
 
 ////////////////////////////////////////////////////////////
 
-#endif // VECTORS_H_
+#endif // VECTORS_H
