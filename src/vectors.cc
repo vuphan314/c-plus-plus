@@ -5,7 +5,7 @@
 template<typename T>
 void printVector3d(const vector<vector<vector<T>>> &vector3d) {
   cout << "<\n";
-  for (vector<vector<T>> vector2d : vector3d) {
+  for (const vector<vector<T>> &vector2d : vector3d) {
     printVector2d(vector2d);
     cout << ",\n";
   }
@@ -14,14 +14,14 @@ void printVector3d(const vector<vector<vector<T>>> &vector3d) {
 
 template<typename T>
 void printVector2d(const vector<vector<T>> &vector2d) {
-  for (vector<T> vector1d : vector2d) {
+  for (const vector<T> &vector1d : vector2d) {
     printVector1d(vector1d);
   }
 }
 
 template<typename T>
 void printVector1d(const vector<T> &vector1d) {
-  for (T item : vector1d) {
+  for (auto item : vector1d) {
     cout << item << "\t";
   }
   cout << "\n";

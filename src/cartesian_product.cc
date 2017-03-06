@@ -3,18 +3,19 @@
 ////////////////////////////////////////////////////////////
 
 template<typename T>
-void setCartesianPower(const vector<T> &items,
-    unsigned int exponent, vector<vector<T>> &output) {
+void setCartesianPower(vector<vector<T>> &output,
+    const vector<T> &items, Int exponent) {
   vector<vector<T>> input;
-  for (size_t i = 0; i < exponent; i++) {
+  for (Int i = 0; i < exponent; i++) {
     input.push_back(items);
   }
-  setCartesianProduct(input, output);
+  setCartesianProduct(output, input);
 }
 
 template<typename T>
-void setCartesianProduct(const vector<vector<T>> &input,
-    vector<vector<T>> &output) {
+void setCartesianProduct(vector<vector<T>> &output,
+    const vector<vector<T>> &input) {
+  output = vector<vector<T>>{{}};
   for (auto& u : input) {
     vector<vector<T>> r;
     for (auto& x : output) {
@@ -25,4 +26,22 @@ void setCartesianProduct(const vector<vector<T>> &input,
     }
     output.swap(r);
   }
+}
+
+////////////////////////////////////////////////////////////
+
+void testCartesianPower() {
+  cout << "Testing cartesian power.\n";
+  vector<vector<int>> output;
+  vector<int> items{0, 1};
+  Int exponent = 3;
+  setCartesianPower(output, items, exponent);
+  printVector2d(output);
+}
+
+void testCartesianProduct() {
+  cout << "Testing cartesian product.\n";
+  vector<vector<int>> output, input{{0, 1}, {10, 11}};
+  setCartesianProduct(output, input);
+  printVector2d(output);
 }

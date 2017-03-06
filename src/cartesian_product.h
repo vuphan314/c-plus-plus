@@ -7,13 +7,23 @@
 
 ////////////////////////////////////////////////////////////
 
-template<typename T>
-void setCartesianPower(const vector<T> &items,
-  unsigned int exponent, vector<vector<T>> &output);
+using Int = unsigned int;
+
+////////////////////////////////////////////////////////////
 
 template<typename T>
-void setCartesianProduct(const vector<vector<T>> &input,
-  vector<vector<T>> &output);
+void setCartesianPower(vector<vector<T>> &output,
+  const vector<T> &items, Int exponent);
+
+template<typename T>
+void setCartesianProduct(vector<vector<T>> &output,
+  const vector<vector<T>> &input);
+
+////////////////////////////////////////////////////////////
+
+void testCartesianPower();
+
+void testCartesianProduct();
 
 ////////////////////////////////////////////////////////////
 
