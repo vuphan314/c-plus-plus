@@ -1,4 +1,4 @@
-# reset
-clear
+reset
+# clear
 make
-# ./cplusplus.out
+./cplusplus.out
