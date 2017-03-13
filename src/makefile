@@ -19,4 +19,4 @@ vectors.o: vectors.h vectors.cc
 ############################################################
 
 clean:
-	rm -f $(OBJECTS) $(EXECUTABLE)
+	rm -f *.o $(EXECUTABLE)
