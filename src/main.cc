@@ -1,5 +1,4 @@
 #include "cartesian_product.h"
-#include "vectors.h"
 
 int main() {
   testCartesianPower();
