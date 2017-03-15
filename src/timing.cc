@@ -15,7 +15,7 @@ auto getDuration(auto startTime) {
     <chrono::seconds>(currentTime - startTime).count();
 }
 
-auto getTime() {
+chrono::time_point<chrono::system_clock> getTime() {
   return chrono::system_clock::now();
 }
 

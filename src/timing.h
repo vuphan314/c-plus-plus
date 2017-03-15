@@ -18,7 +18,7 @@ Float getRemainingDuration(auto startTime,
 
 auto getDuration(auto startTime); // seconds
 
-auto getTime();
+chrono::time_point<chrono::system_clock> getTime();
 
 ////////////////////////////////////////////////////////////
 
