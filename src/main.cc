@@ -1,9 +1,14 @@
 #include "cartesian_product.h"
+#include "timing.h"
 
 int main() {
-  testCartesianPower();
-  testCartesianProduct();
-  testPrinting3d();
-  testPrinting2d();
-  testPrinting1d();
+// timing:
+  testTiming();
+// cartesian_product:
+  // testCartesianPower();
+  // testCartesianProduct();
+// vectors:
+  // testPrinting3d();
+  // testPrinting2d();
+  // testPrinting1d();
 }
