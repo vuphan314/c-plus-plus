@@ -10,6 +10,11 @@ using namespace std;
 
 ////////////////////////////////////////////////////////////
 
+using Long = unsigned long long;
+using Float = long double;
+
+////////////////////////////////////////////////////////////
+
 template<typename T>
 void printVector3d(const vector<vector<vector<T>>> &vector3d);
 

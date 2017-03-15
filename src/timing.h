@@ -9,16 +9,17 @@
 
 ////////////////////////////////////////////////////////////
 
-using Float = long double;
+using Time = chrono::time_point<chrono::system_clock>;
+using Duration = Float;
 
 ////////////////////////////////////////////////////////////
 
-Float getRemainingDuration(auto startTime,
+Float getRemainingDuration(Time startTime,
   Float currentPercentage); // hours
 
-auto getDuration(auto startTime); // seconds
+Duration getDuration(Time startTime); // seconds
 
-chrono::time_point<chrono::system_clock> getTime();
+Time getTime();
 
 ////////////////////////////////////////////////////////////
 
