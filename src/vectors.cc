@@ -3,7 +3,8 @@
 ////////////////////////////////////////////////////////////
 
 template<typename T>
-void printVector3d(const vector<vector<vector<T>>> &vector3d) {
+void printVector3d(
+    const vector<vector<vector<T>>> &vector3d) {
   cout << "<\n";
   for (const vector<vector<T>> &vector2d : vector3d) {
     printVector2d(vector2d);

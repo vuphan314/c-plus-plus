@@ -4,7 +4,7 @@
 
 Float getRemainingDuration(Time startTime,
     Float currentPercentage) {
-  auto currentDuration = getDuration(startTime);
+  Duration currentDuration = getDuration(startTime);
   return currentDuration *
     (100.0 / currentPercentage - 1) / 3600;
 
@@ -23,9 +23,10 @@ Time getTime() {
 ////////////////////////////////////////////////////////////
 
 void testTiming() {
-  auto startTime = getTime();
-  for (int i = 0; i < 1000000000; i++);
+  Time startTime = getTime();
+  Long period = 1000000000;
+  for (Long i = 0; i < period; i++);
   cout << getRemainingDuration(startTime, 50) << "h left\n";
-  for (int i = 0; i < 1000000000; i++);
+  for (Long i = 0; i < period; i++);
   cout << getDuration(startTime) << "s total\n";
 }
