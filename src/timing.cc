@@ -7,13 +7,12 @@ Float getRemainingDuration(Time startTime,
   Duration currentDuration = getDuration(startTime);
   return currentDuration *
     (100.0 / currentPercentage - 1) / 3600;
-
 }
 
 Duration getDuration(Time startTime) {
   Time currentTime = getTime();
-  return chrono::duration_cast
-    <chrono::seconds>(currentTime - startTime).count();
+  return chrono::duration_cast<chrono::seconds>(
+    currentTime - startTime).count();
 }
 
 Time getTime() {
@@ -23,6 +22,7 @@ Time getTime() {
 ////////////////////////////////////////////////////////////
 
 void testTiming() {
+  cout << "Testing timing.\n";
   Time startTime = getTime();
   Long period = 1000000000;
   for (Long i = 0; i < period; i++);
