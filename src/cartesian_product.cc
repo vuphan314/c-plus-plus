@@ -44,6 +44,5 @@ void testCartesianProduct() {
   vector<vector<int>> output, input{{0, 1}, {10, 11}};
   setCartesianProduct(output, input);
   // printVector2d(output);
-  // printVector2d(input);
   testPrinting2d();
 }
