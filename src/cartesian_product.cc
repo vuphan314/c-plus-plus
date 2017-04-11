@@ -36,12 +36,14 @@ void testCartesianPower() {
   vector<int> items{0, 1};
   Long exponent = 3;
   setCartesianPower(output, items, exponent);
-  printVector2d(output);
+  // printVector2d(output);
 }
 
 void testCartesianProduct() {
   cout << "Testing cartesian product.\n";
   vector<vector<int>> output, input{{0, 1}, {10, 11}};
   setCartesianProduct(output, input);
-  printVector2d(output);
+  // printVector2d(output);
+  // printVector2d(input);
+  testPrinting2d();
 }

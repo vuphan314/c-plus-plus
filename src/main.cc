@@ -3,12 +3,14 @@
 
 int main() {
 // timing:
-  testTiming();
+  // testTiming();
+
 // cartesian_product:
-  testCartesianPower();
+  // testCartesianPower();
   testCartesianProduct();
+
 // vectors:
-  testPrinting3d();
-  testPrinting2d();
-  testPrinting1d();
+  // testPrinting3d();
+  // testPrinting2d();
+  // testPrinting1d();
 }

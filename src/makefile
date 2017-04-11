@@ -1,6 +1,6 @@
 COMPILER = g++
 LINKING_OPTIONS = -o $(EXECUTABLE)
-ASSEMBLING_OPTIONS = -c -std=c++11 -Ofast
+ASSEMBLING_OPTIONS = -c -Ofast # -std=c++11
 
 EXECUTABLE = cplusplus.out
 OBJECTS = main.o timing.o cartesian_product.o vectors.o
