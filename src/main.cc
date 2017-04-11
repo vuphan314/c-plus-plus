@@ -5,10 +5,10 @@ int main() {
 // timing:
   testTiming();
 // cartesian_product:
-  // testCartesianPower();
-  // testCartesianProduct();
+  testCartesianPower();
+  testCartesianProduct();
 // vectors:
-  // testPrinting3d();
-  // testPrinting2d();
-  // testPrinting1d();
+  testPrinting3d();
+  testPrinting2d();
+  testPrinting1d();
 }

@@ -14,8 +14,8 @@ using Duration = Float;
 
 ////////////////////////////////////////////////////////////
 
-Float getRemainingDuration(Time startTime,
-  Float currentPercentage); // hours
+Float getRemainingDuration( // hours
+  Time startTime, Float currentPercentage);
 
 Duration getDuration(Time startTime); // seconds
 
