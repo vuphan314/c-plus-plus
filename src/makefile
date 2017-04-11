@@ -1,6 +1,7 @@
 COMPILER = g++
 LINKING_OPTIONS = -o $(EXECUTABLE)
-ASSEMBLING_OPTIONS = -c -Ofast # -std=c++11
+ASSEMBLING_OPTIONS = -c -std=c++11
+	# -Ofast: undefined reference to <templated_function>
 
 EXECUTABLE = cplusplus.out
 OBJECTS = main.o timing.o cartesian_product.o vectors.o
