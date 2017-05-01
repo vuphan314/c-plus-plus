@@ -9,7 +9,7 @@
 
 template<typename T>
 void setCartesianPower(vector<vector<T>> &output,
-  const vector<T> &items, Long exponent);
+  const vector<T> &items, SizeT exponent);
 
 template<typename T>
 void setCartesianProduct(vector<vector<T>> &output,

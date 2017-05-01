@@ -24,9 +24,9 @@ Time getTime() {
 void testTiming() {
   cout << "Testing timing.\n";
   Time startTime = getTime();
-  Long period = 1000000000;
-  for (Long i = 0; i < period; i++);
+  SizeT period = 1000000000;
+  for (SizeT i = 0; i < period; i++);
   cout << getRemainingDuration(startTime, 50) << "h left\n";
-  for (Long i = 0; i < period; i++);
+  for (SizeT i = 0; i < period; i++);
   cout << getDuration(startTime) << "s total\n";
 }

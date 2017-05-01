@@ -4,9 +4,9 @@
 
 template<typename T>
 void setCartesianPower(vector<vector<T>> &output,
-    const vector<T> &items, Long exponent) {
+    const vector<T> &items, SizeT exponent) {
   vector<vector<T>> input;
-  for (Long i = 0; i < exponent; i++) {
+  for (SizeT i = 0; i < exponent; i++) {
     input.push_back(items);
   }
   setCartesianProduct(output, input);
@@ -34,7 +34,7 @@ void testCartesianPower() {
   cout << "Testing cartesian power.\n";
   vector<vector<int>> output;
   vector<int> items{0, 1};
-  Long exponent = 3;
+  SizeT exponent = 3;
   setCartesianPower(output, items, exponent);
   printVector2d(output);
 }
